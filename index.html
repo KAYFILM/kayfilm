@@ -20,22 +20,25 @@
   </div>
 
   <!-- Bloc Réseaux + Vidéo verticale -->
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-    
-    <!-- Gauche : deux rectangles de hauteur exacte -->
-    <div style="display: flex; flex-direction: column; gap: 20px; flex: 1; min-width: 200px;">
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: flex-start;">
+
+    <!-- Gauche : deux rectangles empilés de même hauteur que la vidéo -->
+    <div style="display: flex; flex-direction: column; justify-content: space-between; min-width: 140px; max-width: 140px;">
       <div style="width: 100%; height: 256.67px; background-color: #ddd; border-radius: 12px;"></div>
-      <div style="width: 100%; height: 256.67px; background-color: #ddd; border-radius: 12px;"></div>
+      <div style="width: 100%; height: 256.67px; background-color: #ccc; border-radius: 12px;"></div>
     </div>
 
     <!-- Droite : vidéo verticale (9:16) -->
-    <div style="flex: 1; min-width: 200px;">
-      <div style="position: relative; padding-top: 177.78%; border-radius: 12px; overflow: hidden;"> <!-- 9:16 = 177.78% -->
+    <div style="flex: 1; min-width: 300px; max-width: 300px;">
+      <div id="video-vertical-container" style="position: relative; padding-top: 177.78%; border-radius: 12px; overflow: hidden; background: #000;">
         <iframe src="https://www.youtube.com/embed/your-vertical-video-id"
           title="Short vidéo" frameborder="0" allowfullscreen
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;">
         </iframe>
       </div>
     </div>
+
   </div>
 </section>
+
+<!-- Remarque : la hauteur vidéo réelle est 533.34px (9:16 à 300px de large), donc chaque bloc gauche doit faire (533.34px - 20px) / 2 = 256.67px -->
