@@ -1,44 +1,409 @@
-<section style="max-width: 800px; margin: auto; padding: 40px 20px; font-family: sans-serif;">
-  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 10px;">KAY Film Wedding</h2>
-  <p style="text-align: center; font-style: italic; margin-bottom: 30px;">
-    Chaque image raconte une histoire, chaque vidéo crée un souvenir.
-  </p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAY Film Wedding</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #f8f8f8;
+    }
 
-  <!-- Vidéo principale -->
-  <div style="text-align: center; margin-bottom: 30px;">
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/your-video-id" 
-      title="Vidéo de mariage" frameborder="0" allowfullscreen 
-      style="border-radius: 12px;"></iframe>
-  </div>
+    .wedding-section {
+      background-color: #FFDAD4;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25); /* Ombre nette pour le bloc général */
+    }
 
-  <!-- Bouton -->
-  <div style="text-align: center; margin-bottom: 40px;">
-    <a href="https://www.youtube.com/playlist?list=your-playlist-id" 
-      style="background-color: #000; color: #fff; padding: 12px 24px; text-decoration: none; border-radius: 12px; font-weight: bold;">
-      Découvrez nos films de mariage
-    </a>
-  </div>
+    .center-content {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-  <!-- Bloc Réseaux + Vidéo verticale -->
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: flex-start;">
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #5A3D3D;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Ombre douce pour le titre */
+    }
 
-    <!-- Gauche : deux rectangles empilés de même hauteur que la vidéo -->
-    <div style="display: flex; flex-direction: column; justify-content: space-between; min-width: 140px; max-width: 140px;">
-      <div style="width: 100%; height: 256.67px; background-color: #ddd; border-radius: 12px;"></div>
-      <div style="width: 100%; height: 256.67px; background-color: #ccc; border-radius: 12px;"></div>
+    .subtitle {
+      font-size: 20px;
+      font-style: italic;
+      color: #5A3D3D;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Ombre légère pour le sous-titre */
+    }
+
+    .main-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25); /* Ombre nette pour la vidéo principale */
+    }
+
+    .main-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 14px 70px;
+      background-color: #D49A95;
+      color: #5A3D3D;
+      text-decoration: none;
+      border-radius: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25); /* Ombre nette pour le bouton */
+    }
+
+    .cta-button:hover {
+      background-color: #bb8984;
+      transform: translateY(-4px); /* Effet de levée au survol */
+    }
+
+    .content-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .left-images {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      flex: 1;
+    }
+
+    .image-block {
+      width: 100%;
+      flex: 1;
+      border-radius: 20px;
+      background-color: #ddd;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25); /* Ombre nette pour les images */
+    }
+
+    .vertical-video {
+      aspect-ratio: 9 / 16;
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #ccc;
+      flex: 1;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25); /* Ombre nette pour la vidéo verticale */
+    }
+
+    .vertical-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="wedding-section">
+    <div class="center-content">
+      <div class="title">KAY Film Wedding</div>
+      <div class="subtitle">Chaque image raconte une histoire, chaque vidéo crée un souvenir.</div>
+
+      <!-- Vidéo principale avec le lien que tu as donné -->
+      <div class="main-video">
+        <iframe src="https://www.youtube.com/embed/C3FRhsXp444?si=TzT7TWydm2R63hxc" allowfullscreen></iframe>
+      </div>
+
+      <a href="#" class="cta-button">DÉCOUVRE NOS FILMS DE MARIAGE</a>
     </div>
 
-    <!-- Droite : vidéo verticale (9:16) -->
-    <div style="flex: 1; min-width: 300px; max-width: 300px;">
-      <div id="video-vertical-container" style="position: relative; padding-top: 177.78%; border-radius: 12px; overflow: hidden; background: #000;">
-        <iframe src="https://www.youtube.com/embed/your-vertical-video-id"
-          title="Short vidéo" frameborder="0" allowfullscreen
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;">
-        </iframe>
+    <div class="content-row">
+      <div class="left-images">
+        <div class="image-block"></div>
+        <div class="image-block"></div>
+      </div>
+
+      <!-- Vidéo verticale avec le lien que tu as donné -->
+      <div class="vertical-video">
+        <iframe src="https://www.youtube.com/embed/XbeId8MiS0s" allowfullscreen></iframe>
       </div>
     </div>
-
   </div>
-</section>
 
-<!-- Remarque : la hauteur vidéo réelle est 533.34px (9:16 à 300px de large), donc chaque bloc gauche doit faire (533.34px - 20px) / 2 = 256.67px -->
+</body>
+</html>
+<style>
+  .wedding-section-2 {
+    background-color: #D4EFFF;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 40px auto 0; /* 40px d'écart avec le bloc 1 */
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .center-content-2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .title-2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2F4C5A;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .subtitle-2 {
+    font-size: 20px;
+    font-style: italic;
+    color: #2F4C5A;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-video-2 {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .main-video-2 iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+  }
+
+  .cta-button-2 {
+    display: inline-block;
+    padding: 14px 70px;
+    background-color: #91C7F1;
+    color: #2F4C5A;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .cta-button-2:hover {
+    background-color: #78afd8;
+    transform: translateY(-4px);
+  }
+
+  .content-row-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .left-images-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
+  }
+
+  .image-block-2 {
+    width: 100%;
+    flex: 1;
+    border-radius: 20px;
+    background-color: #ddd;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .vertical-video-2 {
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ccc;
+    flex: 1;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .vertical-video-2 iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+  }
+</style>
+
+<div class="wedding-section-2">
+  <div class="center-content-2">
+    <div class="title-2">KAY Film Corporate</div>
+    <div class="subtitle-2">Votre histoire pro, racontée en images.</div>
+
+    <!-- Vidéo principale -->
+    <div class="main-video-2">
+      <iframe src="https://www.youtube.com/embed/mzASMaKPq48?si=gJJMz9Y-wEdD-Eke" allowfullscreen></iframe>
+    </div>
+
+    <a href="#" class="cta-button-2">DÉCOUVRE NOS FILMS CORPORATE</a>
+  </div>
+
+  <div class="content-row-2">
+    <div class="left-images-2">
+      <div class="image-block-2"></div>
+      <div class="image-block-2"></div>
+    </div>
+
+    <!-- Vidéo verticale -->
+    <div class="vertical-video-2">
+      <iframe src="https://www.youtube.com/embed/20ZAP82ILbI?si=IPjzU9_3QnDWf_d9" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<style>
+  .studio-section {
+    background-color: #FFDAD4;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 40px auto 0; /* 40px d'écart avec le bloc précédent */
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .center-content-studio {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .title-studio {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #5A3D3D;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .subtitle-studio {
+    font-size: 20px;
+    font-style: italic;
+    color: #5A3D3D;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-video-studio {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .main-video-studio iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+  }
+
+  .cta-button-studio {
+    display: inline-block;
+    padding: 14px 70px;
+    background-color: #D49A95;
+    color: #5A3D3D;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .cta-button-studio:hover {
+    background-color: #bb8984;
+    transform: translateY(-4px);
+  }
+
+  .content-row-studio {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .left-images-studio {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
+  }
+
+  .image-block-studio {
+    width: 100%;
+    flex: 1;
+    border-radius: 20px;
+    background-color: #ddd;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .vertical-video-studio {
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ccc;
+    flex: 1;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .vertical-video-studio iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+  }
+</style>
+
+<div class="studio-section">
+  <div class="center-content-studio">
+    <div class="title-studio">KAY Film Studio</div>
+    <div class="subtitle-studio">Chaque image raconte une histoire, chaque vidéo crée un souvenir.</div>
+
+    <!-- Vidéo principale -->
+    <div class="main-video-studio">
+      <iframe src="https://www.youtube.com/embed/mzASMaKPq48?si=gJJMz9Y-wEdD-Eke" allowfullscreen></iframe>
+    </div>
+
+    <a href="#" class="cta-button-studio">DÉCOUVREZ NOS FILMS DE MARIAGE</a>
+  </div>
+
+  <div class="content-row-studio">
+    <div class="left-images-studio">
+      <div class="image-block-studio"></div>
+      <div class="image-block-studio"></div>
+    </div>
+
+    <!-- Vidéo verticale -->
+    <div class="vertical-video-studio">
+      <iframe src="https://www.youtube.com/embed/20ZAP82ILbI?si=IPjzU9_3QnDWf_d9" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
